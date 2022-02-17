@@ -1,9 +1,10 @@
-import java.security.PublicKey;
 import java.util.Scanner;
+import java.util.Random;
 
 
 public class MethodsExercise {
     private static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         add(3, 7);
         subtract(10, 4);
@@ -13,7 +14,7 @@ public class MethodsExercise {
         System.out.println(times(3, 6));
         System.out.println(getInteger(1, 10));
         System.out.println(factorial(1));
-
+        diceRoll();
     }
 
     //    EXERCISE 1------------------------
@@ -80,11 +81,21 @@ public class MethodsExercise {
 
 
     //     EXERCISE 4---------------------------------------
-    public static int diceRoll(int die1, int die2) {
-        System.out.println("Enter the number of side on your dice:  ");
-        int userInput = sc.nextInt();
-        System.out.println(userInput);
-        return userInput;
-    }
 
+    public static void diceRoll() {
+        System.out.println("Enter the number of side on your dice:  ");
+        int numSides = sc.nextInt();
+        System.out.println("Juwanna roll the dice? [y/n]");
+        String confirm = sc.next();
+        if (confirm.equalsIgnoreCase("y")) {
+            int diceRollOne = (int) Math.floor(Math.random() * numSides + 1);
+       int diceRollTwo = (int) Math.floor(Math.random() * numSides + 1);
+            System.out.printf("You rolled a %s and a %s", diceRollOne, diceRollTwo);
+
+        } else {
+            System.out.println("I didn't want to play with you anyways!");
+        }
+
+    }
 }
+
