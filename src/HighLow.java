@@ -7,12 +7,17 @@ public class HighLow {
     public static void main(String[] args) {
         Random rando = new Random();
         int numTries = 1;
+        int maxTries = 10;
         int correctAnswer = rando.nextInt(100);
         System.out.println(correctAnswer);
         while (true) {
             System.out.println("Enter a number betwixt 1 and 100:  ");
             int guess = sc.nextInt();
             System.out.printf("You have guessed %s times!%n", numTries);
+            if (numTries == maxTries){
+                System.out.println("You've reached the max number of guesses and you didn't get it...go flog yourself!");
+                break;
+            }
 
             if (guess < correctAnswer) {
                 System.out.println("Your guess is too low...");
