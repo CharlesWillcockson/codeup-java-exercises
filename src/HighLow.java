@@ -11,7 +11,7 @@ public class HighLow {
         int correctAnswer = rando.nextInt(100);
         System.out.println(correctAnswer);
         while (true) {
-            System.out.println("Enter a number betwixt 1 and 100:  ");
+            System.out.print("Enter a number betwixt 1 and 100:  ");
             int guess = sc.nextInt();
             System.out.printf("You have guessed %s times!%n", numTries);
             if (numTries == maxTries){
@@ -19,7 +19,10 @@ public class HighLow {
                 break;
             }
 
-            if (guess < correctAnswer) {
+            if (guess < 1 || guess > 100){
+                System.out.println("Not a valid entry!");
+            }
+            else if (guess < correctAnswer) {
                 System.out.println("Your guess is too low...");
                 numTries++;
             } else if (guess > correctAnswer) {
