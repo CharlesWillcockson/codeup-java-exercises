@@ -12,7 +12,7 @@ public class Input {
     public String getString() {
         return this.scanner.nextLine();
     }
-
+}
 
 
 
