@@ -3,14 +3,13 @@ import java.util.Scanner;
 public class adventureGame {
     Scanner sc = new Scanner(System.in);
 
-    String playerName;
-    String playerWeapon;
+    String playerName = "Morty";
+    String playerWeapon = "laser gun";
     String cuss1 = "sh#@";
     String cuss2 = "f@%k";
     int playerHP;
-    int choice;
     int enemyHP;
-    int playerMeleeDmg;
+    int playerWeaponDmg;
     int playerLevel;
 
     public static void main(String[] args) {
@@ -54,3 +53,6 @@ public class adventureGame {
 }
 
 
+//When they get to the planet where Java was invented (Planet CodeUp?), they get stuck in a do while loop and have to fight syntax (sin tacks) errors to survive and eventually break the loop and get back to Earth.
+
+//Attacks deal random number between 1 and 5 HP damage when landed.
