@@ -17,7 +17,11 @@ public class Circle {
         return 2 * Math.PI * this.radius;
     }
 
-    public int counter() {
+    public static int counter() {
         return count;
+    }
+
+    public static void getCount(int cnt){
+        count = cnt;
     }
 }

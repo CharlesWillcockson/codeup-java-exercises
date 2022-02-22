@@ -16,8 +16,8 @@ public class CircleApp {
             System.out.println("The area of the circle is: " + circle1.getArea());
             System.out.println("The circumfrence is: " + circle1.getCircumfrence());
             count++;
-
-            System.out.println("You have created " + Circle.counter());
+            Circle.getCount(count);
+            System.out.println("You have created " + Circle.counter() + " circular objects.");
             circleTheWagons = input.yesNo("Would you like to make another round thingy?");
 
         }
