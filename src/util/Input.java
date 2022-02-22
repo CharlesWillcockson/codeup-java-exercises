@@ -49,7 +49,7 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a double:  ");
+//        System.out.println("Enter a double:  ");
         return this.scanner.nextDouble();
     }
 }
