@@ -31,7 +31,7 @@ public class adventureGame {
         System.out.println("Morty -- Grandpa Rick, can you help me with my coding homework?");
         System.out.printf("Rick -- It better not be %sing Java, Morty!\n", cuss2);
         System.out.println("Morty -- It is....but what's wrong with Java?");
-        System.out.printf("Rick -- Sometimes I forget how clueless you are Morty.  Java is a language created by a race of %sing tweeked out aliens from the JuanValdezio nebula.  Get in the ship Morty, I am going to show you where Java was created.  You will need to grab a weapon Morty, what will you choose?\n", cuss2);
+        System.out.printf("Rick -- Sometimes I forget how clueless you are Morty.  Java is a language created by a race of %sing tweeked out aliens from the Folgerio nebula.  Get in the ship Morty, I am going to show you where Java was created.  You will need to grab a weapon Morty, what will you choose?\n", cuss2);
         System.out.println("1 -- laser gun");
         System.out.println("2 -- taxidermied swordfish");
         int choice1 = sc.nextInt();
