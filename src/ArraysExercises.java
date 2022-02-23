@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class ArraysExercises {
     public static void main(String[] args) {
+//        Person personas[] = new Person[2];
         Person person1 = new Person("Charles");
         Person person2 = new Person("Nelson");
         Person person3 = new Person("Andrew");
