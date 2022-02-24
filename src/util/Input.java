@@ -41,7 +41,12 @@ public class Input {
 
 
     public int getInt() {
-        System.out.println("Enter an integer:  ");
+//        System.out.println("Enter an integer:  ");
+        return this.scanner.nextInt();
+    }
+
+    public int getInt(String prompt) {
+        System.out.println(prompt);
         return this.scanner.nextInt();
     }
 
