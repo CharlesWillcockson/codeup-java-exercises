@@ -7,15 +7,14 @@ public class Square extends Rectangle {
         super(side, side);
     }
 
-    public void setLength() {
-        this.length = length;
+    public double getArea() {
+        double side = super.length;
+        return Math.pow(side, 2);
     }
 
-    public void setWidth() {
-        this.width = side;
-    }
-
-    public void getArea() {
+    public double getPerimeter() {
+        double side = super.length;
+        return 4 * side;
     }
 
 
