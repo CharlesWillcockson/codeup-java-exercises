@@ -7,7 +7,9 @@ public class MoviesApplication {
 
     }
 
-    public static void menu() {
+    public static int userChoice() {
+        Input input = new Input();
+
         System.out.println("What would you like to do?");
         System.out.println("");
         System.out.println("0 - exit");
@@ -18,7 +20,11 @@ public class MoviesApplication {
         System.out.println("5 - view movies in the scifi category");
         System.out.println("6 - view movies in the musicals category");
         System.out.println("");
+        System.out.println("Enter your choice: ");
+        return input.getInt();
     }
+
+
 
 
 
