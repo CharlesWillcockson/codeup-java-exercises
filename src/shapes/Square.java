@@ -3,8 +3,8 @@ package shapes;
 public class Square extends Rectangle {
     private double side;
 
-    public Square (double side) {
-
+    public Square(double side) {
+        super(side, side);
     }
 
     public void setLength() {
@@ -12,9 +12,11 @@ public class Square extends Rectangle {
     }
 
     public void setWidth() {
-        this.width = width;
+        this.width = side;
     }
 
+    public void getArea() {
+    }
 
 
 }
