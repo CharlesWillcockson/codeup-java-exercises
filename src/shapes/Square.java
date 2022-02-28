@@ -1,6 +1,6 @@
 package shapes;
 
-abstract class Square extends Quadrilateral {
+public class Square extends Quadrilateral {
 
     public Square(int side){
         super(side, side);
