@@ -17,3 +17,5 @@ public class TheSumOfAllArrays {
         System.out.println(sumAll());
     }
 }
+
+
