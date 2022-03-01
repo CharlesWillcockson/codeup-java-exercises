@@ -1,9 +1,13 @@
 package movies;
 
 import util.Input;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class MoviesApplication {
     public static Input input = new Input();
+    public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         movieSelection();
 
@@ -59,7 +63,7 @@ public class MoviesApplication {
                     viewByCategory("musical");
                     break;
                 case 7:
-                    moviesArray = updateArray(moviesArray, addMovie());
+                    moviesArray = newArray(moviesArray, createMovie());
                     System.out.println(moviesArray[moviesArray.length - 1].toString());
                     break;
             }
@@ -80,22 +84,19 @@ public class MoviesApplication {
         return choice;
     }
 
-    public static Movie addMovie(){
-        System.out.println("Enter the movie's title:  ");
-        String name = input.getString();
-        System.out.println("");
-        System.out.println("Enter the movie's category:  ");
-        String category = input.getString();
+    public static Movie createMovie() {
+        String name = input.getString("Enter the movie's title");
+        System.out.println();
+        String category = input.getString("Enter the movie's category");
         Movie movie = new Movie(name, category);
         return movie;
     }
 
-    public static Movie[] updateArray(Movie[] moviesArray, Movie movie){
-        Movie[] newArray = new Movie[moviesArray.length + 1];
-        for (int i = 0; i < moviesArray.length; i++){
-            newArray[i] = moviesArray[i];
-        }
+    public static Movie[] newArray(Movie[] moviesArr, Movie movie) {
+        Movie[] newArray = new Movie[moviesArr.length + 1];
+        newArray = Arrays.copyOf(moviesArr, moviesArr.length +1);
         newArray[newArray.length - 1] = movie;
+        System.out.println("Movie added.");
         return newArray;
     }
 
