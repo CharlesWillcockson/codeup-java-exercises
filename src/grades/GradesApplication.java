@@ -41,9 +41,10 @@ public class GradesApplication {
 
         System.out.println("What would you like to do?");
         System.out.println();
-        System.out.println("0. Exit application");
-        System.out.println("1. View a student's information");
-        System.out.println(("2. View all of the students grades."));
+        System.out.println("0. Exit application.");
+        System.out.println("1. View a student's information.");
+        System.out.println("2. View all of the students grades.");
+        System.out.println("3. View overall class average.");
 
 
         int menuChoice = 0;
@@ -79,7 +80,13 @@ public class GradesApplication {
                     for (String student : students.keySet()){
                         System.out.printf("Name %s%n Grades: %s%n", students.get(student).getName(), students.get(student).getGrades());
                     }
-
+                case 3:
+                    double classAvg = 0.0;
+                    for (String student : students.keySet()){
+                        classAvg += students.get(student).getGradeAverage();
+                    }
+                    classAvg /= students.size();
+                    System.out.printf("The classes average is: %.1f%n", classAvg);
 
             }
         }
