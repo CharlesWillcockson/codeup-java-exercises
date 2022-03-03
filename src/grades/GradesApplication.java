@@ -9,6 +9,7 @@ public class GradesApplication {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         HashMap<String, Student> students = new HashMap<>();
 
         Student student1 = new Student("Charles");
@@ -65,7 +66,7 @@ public class GradesApplication {
                     }
                     System.out.println();
                     System.out.println("\nWhich student would you like to see more information on?");
-                    String choice = sc.nextLine();
+                    String choice = scan.nextLine();
                     Student userChoice = students.get(choice);
                     try {
                         System.out.printf("Github name: %s%n"
@@ -77,10 +78,12 @@ public class GradesApplication {
                     } catch (Exception e) {
                         System.out.println("Sorry, that user does not exist...");
                     }
+                    break;
                 case 2:
                     for (String student : students.keySet()){
                         System.out.printf("Name %s%n Grades: %s%n", students.get(student).getName(), students.get(student).getGrades());
                     }
+                    break;
                 case 3:
                     double classAvg = 0.0;
                     for (String student : students.keySet()){
@@ -88,11 +91,13 @@ public class GradesApplication {
                     }
                     classAvg /= students.size();
                     System.out.printf("The classes average is: %.1f%n", classAvg);
+                    break;
                 case 4:
                     System.out.println("name, github_username, average");
                     for (String student : students.keySet()) {
                         System.out.printf("%s,%s,%.1f%n", students.get(student).getName(), student, students.get(student).getGradeAverage());
                     }
+                    break;
             }
         }
     }
