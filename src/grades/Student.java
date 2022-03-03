@@ -18,6 +18,14 @@ public class Student {
         grades.add(grade);
     }
 
+    public String getGrades(){
+        String scores = "";
+        for (Integer grade : grades){
+            scores += grade + " ";
+        }
+        return scores;
+    }
+
     public double getGradeAverage(){
         double average = 0.0;
         int sum = 0;

@@ -48,8 +48,9 @@ public class GradesApplication {
         try{
             System.out.printf("Github name: %s%n"
             + "Real name: %s%n"
-            + "Current average: %.1f%n",
-                    choice, userChoice.getName(), userChoice.getGradeAverage()
+            + "Current grades: %s%n"
+            + "Current average: %.1f%n ",
+                    choice, userChoice.getName(), userChoice.getGrades(), userChoice.getGradeAverage()
             );
         }catch (Exception e){
             System.out.println("Sorry, that user does not exist...");
