@@ -45,6 +45,7 @@ public class GradesApplication {
         System.out.println("1. View a student's information.");
         System.out.println("2. View all of the students grades.");
         System.out.println("3. View overall class average.");
+        System.out.println("4. Create a CSV file.");
 
 
         int menuChoice = 0;
@@ -87,7 +88,11 @@ public class GradesApplication {
                     }
                     classAvg /= students.size();
                     System.out.printf("The classes average is: %.1f%n", classAvg);
-
+                case 4:
+                    System.out.println("name, github_username, average");
+                    for (String student : students.keySet()) {
+                        System.out.printf("%s,%s,%.1f%n", students.get(student).getName(), student, students.get(student).getGradeAverage());
+                    }
             }
         }
     }
