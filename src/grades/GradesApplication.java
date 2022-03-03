@@ -1,11 +1,15 @@
 package grades;
 
+import util.Input;
+
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
     public static void main(String[] args) {
-        HashMap<String, Student> students= new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, Student> students = new HashMap<>();
 
         Student student1 = new Student("Charles");
         Student student2 = new Student("Robert");
@@ -32,13 +36,23 @@ public class GradesApplication {
         students.put("SneakerFreak", student2);
         students.put("MrMundst", student3);
         students.put("TheBeard", student4);
-        System.out.println(student1);
-    }
 
-    public static void cmdLine(HashMap<String, Student> students){
         System.out.println("-----Here is a list of the student's GitHub usernames-----");
-        for (String ghUsername : students.keySet()){
-            System.out.println(ghUsername);
+        for (String key : students.keySet()) {
+            System.out.printf("%s\n", key);
+        }
+        System.out.println("Which student would you like to see more information on?");
+        String choice = sc.nextLine();
+        Student userChoice = students.get(choice);
+
+        try{
+            System.out.printf("Github name: %s%n"
+            + "Real name: %s%n"
+            + "Current average: %.1f%n",
+                    choice, userChoice.getName(), userChoice.getGradeAverage()
+            );
+        }catch (Exception e){
+            System.out.println("Sorry, that user does not exist...");
         }
 
     }
