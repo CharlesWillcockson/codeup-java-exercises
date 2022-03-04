@@ -4,11 +4,10 @@ import java.util.Scanner;
 import java.util.HashMap;
 
 public class GroceryApplication {
-   static Input input = new Input();
+    static Input input = new Input();
+    private ArrayList<String> categories;
+    private HashMap<String, >
 
-   public static void addToList(){
-
-   }
 
    public static void groceryListApp(){
 
@@ -33,11 +32,39 @@ public class GroceryApplication {
                System.out.println("Which category would you like to add an item to? [0-7]");
                int selectedCategory = input.getInt();
 
+               String category;
                switch (selectedCategory){
                    case 0:
                     cont = false;
                        System.out.println("Thank you for using Charles' super grocery app, voted (by my mom) the best grocery app in the world!");
+                       break;
+                   case 1:
+                       category = "Dairy";
+                       break;
+                   case 2:
+                       category = "Meats";
+                       break;
+                   case 3:
+                       category = "Fruits";
+                       break;
+                   case 4:
+                       category = "Vegetables";
+                       break;
+                   case 5:
+                       category = "Hygiene";
+                       break;
+                   case 6:
+                       category = "Snacks";
+                   case 7:
+                       category = "Other";
+                   default:
+                       System.out.println("Please select a real category, dummy!");
+
                }
+
+               String name = input.getString("Enter the item you wish to add: ");
+               int quantity = input.getInt("Enter how many you want to get: ");
+
                System.out.println();
                System.out.println("Would you like to add another item?");
                boolean addMore = input.yesNo();
