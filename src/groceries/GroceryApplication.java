@@ -1,3 +1,5 @@
+package groceries;
+
 import util.Input;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -5,8 +7,8 @@ import java.util.HashMap;
 
 public class GroceryApplication {
     static Input input = new Input();
-    private ArrayList<String> categories;
-    private HashMap<String, >
+    private ArrayList< ;
+    public static HashMap<groceryItem, Integer> list = new HashMap<>();
 
 
    public static void groceryListApp(){
