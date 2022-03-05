@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class GroceryApplication {
     static Input input = new Input();
     private ArrayList< ;
-    public static HashMap<groceryItem, Integer> list = new HashMap<>();
+    public static HashMap<String, String> item = new HashMap<>();
 
 
    public static void groceryListApp(){
@@ -41,31 +41,33 @@ public class GroceryApplication {
                        System.out.println("Thank you for using Charles' super grocery app, voted (by my mom) the best grocery app in the world!");
                        break;
                    case 1:
-                       category = "Dairy";
+                       item.put("category", "Dairy");
                        break;
                    case 2:
-                       category = "Meats";
+                       item.put("category", "Meats");
                        break;
                    case 3:
-                       category = "Fruits";
+                       item.put("category", "Fruits");
                        break;
                    case 4:
-                       category = "Vegetables";
+                       item.put("category", "Vegetables");
                        break;
                    case 5:
-                       category = "Hygiene";
+                       item.put("category", "Hygiene");
                        break;
                    case 6:
-                       category = "Snacks";
+                       item.put("category", "Snacks");
                    case 7:
-                       category = "Other";
+                       item.put("category", "Other");
                    default:
                        System.out.println("Please select a real category, dummy!");
 
                }
 
                String name = input.getString("Enter the item you wish to add: ");
+               item.put("name", name);
                int quantity = input.getInt("Enter how many you want to get: ");
+               item.put("quantity", quantity);
 
                System.out.println();
                System.out.println("Would you like to add another item?");
