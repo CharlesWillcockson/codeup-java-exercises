@@ -31,7 +31,7 @@ public class Input {
     }
 
     public int getInt(int min, int max, String prompt) {
-        int userInput = 0;
+        int userInput;
         do {
             System.out.println(prompt);
             userInput = Integer.parseInt(getString());
@@ -41,8 +41,11 @@ public class Input {
 
 
     public int getInt() {
-//        System.out.println("Enter an integer:  ");
-        return Integer.parseInt(getString());
+      try {
+          return Integer.parseInt(getString());
+      }catch (NumberFormatException e){
+          throw new NumberFormatException("Not an integer");
+      }
     }
 
     public int getInt(String prompt) {
@@ -60,8 +63,14 @@ public class Input {
     }
 
     public double getDouble(){
-        return Double.parseDouble(getString());
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            throw new NumberFormatException("The number does not have a decimal");
+        }
     }
+
+
 }
 
 

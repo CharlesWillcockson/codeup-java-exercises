@@ -15,4 +15,8 @@ public class Assessment {
     public static String shout(String str){
         return str.toUpperCase(Locale.ROOT) + "!!!";
     }
+
+//    public static removeCats(){
+
+    }
 }
