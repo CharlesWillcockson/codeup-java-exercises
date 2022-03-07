@@ -99,16 +99,16 @@ Scanner sc = new Scanner(System.in);
 //        ​
 //        Note that the assessment spec only requires you to have methods and classes defined, there is not any requirement for a `main` method. However, creating additional methods will **not** be counted against you, so you are **_highly encouraged_** to create a `main` method and write some code that tests out the code you are writing for the assessment specification. For example, if you were working on the `half` function, you should call that function within the main method and make sure that it returns the correct values for several test cases.
 
-    public static int half() {
-        int num;
-        System.out.println("Please enter an integer:  ");
-        num = sc.nextInt();
-        int i = num / 2;
-        return i;
+//    public static int half() {
+//        int num;
+//        System.out.println("Please enter an integer:  ");
+//        num = sc.nextInt();
+//        int i = num / 2;
+//        return i;
+//
+//    }
 
-    }
-
-    public static void main(String[] args) {
-        half();
-    }
+//    public static void main(String[] args) {
+//        half();
+//    }
 }
