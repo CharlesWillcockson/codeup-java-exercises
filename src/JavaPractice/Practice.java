@@ -1,8 +1,9 @@
 package JavaPractice;
 
-public class Practice {
-}
+import java.util.Scanner;
 
+public class Practice {
+Scanner sc = new Scanner(System.in);
 
 //# Java Fundamentals
 //        ​
@@ -97,3 +98,17 @@ public class Practice {
 //        1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
 //        ​
 //        Note that the assessment spec only requires you to have methods and classes defined, there is not any requirement for a `main` method. However, creating additional methods will **not** be counted against you, so you are **_highly encouraged_** to create a `main` method and write some code that tests out the code you are writing for the assessment specification. For example, if you were working on the `half` function, you should call that function within the main method and make sure that it returns the correct values for several test cases.
+
+    public static int half() {
+        int num;
+        System.out.println("Please enter an integer:  ");
+        num = sc.nextInt();
+        int i = num / 2;
+        return i;
+
+    }
+
+    public static void main(String[] args) {
+        half();
+    }
+}
