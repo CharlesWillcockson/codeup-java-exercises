@@ -15,8 +15,7 @@ public class Input {
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        String str = scanner.nextLine();
-        return str;
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
@@ -31,11 +30,11 @@ public class Input {
         return userEntry.contains("y");
     }
 
-    public int getInt(int min, int max) {
-        int userInput;
+    public int getInt(int min, int max, String prompt) {
+        int userInput = 0;
         do {
-            System.out.printf("Enter a number betwixt %s and %s!\n", min, max);
-            userInput = this.scanner.nextInt();
+            System.out.println(prompt);
+            userInput = Integer.parseInt(getString());
         } while (userInput < min || userInput > max);
         return userInput;
     }
@@ -43,12 +42,12 @@ public class Input {
 
     public int getInt() {
 //        System.out.println("Enter an integer:  ");
-        return this.scanner.nextInt();
+        return Integer.parseInt(getString());
     }
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        return this.scanner.nextInt();
+        return getInt();
     }
 
     public double getDouble(double min, double max) {
@@ -61,8 +60,7 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a double:  ");
-        return this.scanner.nextDouble();
+        return Double.parseDouble(getString());
     }
 }
 
