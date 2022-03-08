@@ -66,6 +66,17 @@ public class ContactsApplication {
             System.out.println("Enter first or last name:  ");
             String userSearch = searcher.nextLine();
             Path contactsPath = Paths.get("data", "contacts.txt");
+            List<String> ContactList;
+            try{
+                ContactList = Files.readAllLines(contactsPath);
+                for (String contact : ContactList){
+                    if (contact.toLowerCase().contains(userSearch.toLowerCase())){
+                        System.out.println(contact);
+                    }
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
 
 
@@ -81,6 +92,7 @@ public class ContactsApplication {
                     addContact();
                     break;
                 case 3:
+                    searchContacts();
                     break;
                 case 4:
                     break;
