@@ -66,11 +66,25 @@ public class Input {
         try {
             return Double.parseDouble(getString());
         }catch (NumberFormatException e){
-            throw new NumberFormatException("The number does not have a decimal");
+            throw new NumberFormatException("That isn't not a double.");
         }
     }
 
+    public int getBinary(){
+        try {
+            return Integer.valueOf(getString(), 2);
+        }catch (NumberFormatException e){
+            throw new NumberFormatException("Ones and Zeroes only!");
+        }
+    }
 
+    public int getHex() {
+        try {
+            return Integer.valueOf(getString(), 16);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Enter an integer or character a-f");
+        }
+    }
 }
 
 
