@@ -79,6 +79,10 @@ public class ContactsApplication {
             }
         }
 
+        public static void deleteContact(){
+
+        }
+
 
     public static void main(String[] args) throws IOException{
 
