@@ -99,6 +99,7 @@ public class ContactsApplication {
                     searchContacts();
                     break;
                 case 4:
+                    deleteContact();
                     break;
                 case 5:
                     System.out.println("Thank you for using C & C Contacts Factory!");
