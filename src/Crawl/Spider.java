@@ -1,6 +1,8 @@
+package Crawl;
+
 import java.util.*;
 
-package Crawl;
+
 
 public class Spider {
     private static final int MaxPagesToSearch = 10;
@@ -19,7 +21,7 @@ public class Spider {
     public void search(String url, String searchWord){
         while (this.pagesVisited.size() < MaxPagesToSearch){
             String currentURL;
-            SpiderLeg leg = new SpiderLeg();
+            Crawl.SpiderLeg leg = new Crawl.SpiderLeg();
             if (this.pagesToVisit.isEmpty()){
                 currentURL = url;
                 this.pagesVisited.add(url);
@@ -29,11 +31,11 @@ public class Spider {
             leg.crawl(currentURL);
             boolean success = leg.searchForWord(searchWord);
             if (success){
-                System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+                System.out.println(String.format("**Success** Word %s found on the site", searchWord));
                 break;
             }
             this.pagesToVisit.addAll(leg.getLinks());
         }
-        System.out.println(String.format("**Done** Visited %s web page(s)", this.pagesVisited.size());
+        System.out.println(String.format("**Done** Visited %s web page(s)", this.pagesVisited.size()));
     }
 }
